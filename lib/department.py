@@ -150,7 +150,7 @@ class Department:
             WHERE id = ?
         """
 
-        row = CURSOR.execute(sql, (id,)).fetchone()
+        row = CURSOR.execute(sql,(id,)).fetchone()
         return cls.instance_from_db(row) if row else None
 
     @classmethod
